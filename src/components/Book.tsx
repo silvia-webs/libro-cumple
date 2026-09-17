@@ -11,6 +11,7 @@ import {
 
 import CoverPage from "@/components/pages/CoverPage";
 import EarlyPhotosPage from "@/components/pages/EarlyPhotosPage";
+import IllustrationPage from "@/components/pages/IllustrationPage";
 import LetterPage from "@/components/pages/LetterPage";
 
 const HTMLFlipBook = dynamic(() => import("react-pageflip-enhanced"), {
@@ -106,13 +107,14 @@ export default function Book() {
           <CoverPage />
           <LetterPage />
           <EarlyPhotosPage />
+          <IllustrationPage />
 
           <div className="page flex h-full w-full flex-col items-center justify-center gap-3 bg-azul-pastel/40 p-8">
             <p className="font-display text-4xl text-azul-cielo sm:text-5xl">
-              Página 4
+              Página 5
             </p>
             <p className="text-center text-lg text-foreground/80 sm:text-xl">
-              Próximo: el día que todo empezó
+              Próximo: cómo nos conocimos
             </p>
           </div>
         </FlipBook>
