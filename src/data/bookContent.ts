@@ -5,8 +5,8 @@ export type PhotoRef = {
 };
 
 export type BookMeta = {
-  herName: string;
-  hisName: string;
+  herNickName: string;
+  hisNickName: string;
   herAge: number;
   yearsTogether: number;
   startDateLabel: string;
@@ -49,6 +49,13 @@ export type CarouselPageContent = {
   photos: PhotoRef[];
   caption?: string;
   style?: "default" | "polaroid";
+};
+
+export type EarlyPhotosPageContent = {
+  type: "earlyPhotos";
+  title: string;
+  photos: PhotoRef[];
+  caption: string;
 };
 
 export type IllustrationPageContent = {
@@ -109,6 +116,7 @@ export type BookPageContent =
   | CoverPageContent
   | LetterPageContent
   | CarouselPageContent
+  | EarlyPhotosPageContent
   | IllustrationPageContent
   | StoryPageContent
   | MapPageContent
@@ -119,8 +127,8 @@ export type BookPageContent =
   | AudioPageContent;
 
 export const bookMeta: BookMeta = {
-  herName: "Mi Amor",
-  hisName: "Tu Novio",
+  herNickName: "Mi Amor",
+  hisNickName: "Tu Novio",
   herAge: 29,
   yearsTogether: 9,
   startDateLabel: "28 de noviembre de 2017",
@@ -133,33 +141,32 @@ export const bookContent = {
 
   cover: {
     type: "cover",
-    title: "Feliz 29",
-    subtitle: bookMeta.herName,
+    title: "Felices 29",
+    subtitle: bookMeta.herNickName,
     footer: "9 años juntos, infinito por delante",
   } satisfies CoverPageContent,
 
   letter: {
     type: "letter",
     body: `Buenos días, mi amor ❤️ Hoy quiero mandarte un saludo desde la distancia y recordarte cuánto te quiero. Ya son 9 años compartiendo momentos, historias y tantos recuerdos, y aunque ahora no pueda estar cerquita de ti, siempre estás presente en mi corazón. Te extraño mucho, extraño tus abrazos y esa sonrisa que tanto me encanta. Espero que tengas un hermoso día, mi niña. Te mando un beso enorme y un abrazo de esos que pronto espero poder darte en persona. ❤️🥰`,
-    signature: `Con todo mi amor, ${bookMeta.hisName}`,
+    signature: `Con todo mi amor, ${bookMeta.hisNickName}`,
   } satisfies LetterPageContent,
 
-  earlyCarousel: {
-    type: "carousel",
+  earlyPhotos: {
+    type: "earlyPhotos",
     title: "Antes de conocerte...",
     photos: [
       {
-        src: "/images/novios2016.jpeg",
-        alt: "Foto de ella antes de conocernos, 2016",
+        src: "/images/pau-1.jpeg",
+        alt: "Foto de ella antes de conocernos",
       },
       {
-        src: "/images/novios2017-2.jpeg",
-        alt: "Foto cercana al inicio, 2017",
+        src: "/images/pau-2.jpeg",
+        alt: "Otra foto de ella antes de conocernos",
       },
     ],
     caption: "Ella, siempre radiante",
-    style: "default",
-  } satisfies CarouselPageContent,
+  } satisfies EarlyPhotosPageContent,
 
   momentZero: {
     type: "illustration",
@@ -303,7 +310,7 @@ export const bookContent = {
     type: "audio",
     playLabel: "Escucha mi voz",
     message: "Feliz cumpleaños, mi amor. Te amo.",
-    credits: `Hecho con amor por ${bookMeta.hisName}`,
+    credits: `Hecho con amor por ${bookMeta.hisNickName}`,
     audioSrc: "/audio/mensaje.mp3",
   } satisfies AudioPageContent,
 } as const;
