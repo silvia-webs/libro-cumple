@@ -9,10 +9,18 @@ import {
   type ReactNode,
 } from "react";
 
+import AudioPage from "@/components/pages/AudioPage";
+import ChangesPage from "@/components/pages/ChangesPage";
 import CoverPage from "@/components/pages/CoverPage";
 import EarlyPhotosPage from "@/components/pages/EarlyPhotosPage";
+import FuturePage from "@/components/pages/FuturePage";
 import IllustrationPage from "@/components/pages/IllustrationPage";
 import LetterPage from "@/components/pages/LetterPage";
+import MapPage from "@/components/pages/MapPage";
+import QualitiesPage from "@/components/pages/QualitiesPage";
+import RecentPhotosPage from "@/components/pages/RecentPhotosPage";
+import StoryPage from "@/components/pages/StoryPage";
+import TimelinePage from "@/components/pages/TimelinePage";
 
 const HTMLFlipBook = dynamic(() => import("react-pageflip-enhanced"), {
   ssr: false,
@@ -108,15 +116,14 @@ export default function Book() {
           <LetterPage />
           <EarlyPhotosPage />
           <IllustrationPage />
-
-          <div className="page flex h-full w-full flex-col items-center justify-center gap-3 bg-azul-pastel/40 p-8">
-            <p className="font-display text-4xl text-azul-cielo sm:text-5xl">
-              Página 5
-            </p>
-            <p className="text-center text-lg text-foreground/80 sm:text-xl">
-              Próximo: cómo nos conocimos
-            </p>
-          </div>
+          <StoryPage />
+          <MapPage />
+          <TimelinePage />
+          <ChangesPage />
+          <RecentPhotosPage />
+          <QualitiesPage />
+          <FuturePage />
+          <AudioPage />
         </FlipBook>
       )}
     </div>

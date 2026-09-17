@@ -180,7 +180,7 @@ export const bookContent = {
     title: "Cómo nos conocimos",
     body: "Nos conocimos en la universidad, entre clases y pasillos. No recuerdo el momento exacto, pero sí recuerdo que desde entonces algo cambió. Poco a poco te fuiste volviendo mi persona favorita.",
     photo: {
-      src: "/images/novios2017-2.jpeg",
+      src: "/images/pau-3.jpeg",
       alt: "Recuerdo de cuando nos conocimos",
     },
   } satisfies StoryPageContent,
@@ -199,7 +199,7 @@ export const bookContent = {
       {
         year: "2018",
         photo: {
-          src: "/images/novios2018.jpeg",
+          src: "/images/pau-3.jpeg",
           alt: "Nosotros en 2018",
         },
         caption: "Nuestro primer año",
@@ -207,7 +207,7 @@ export const bookContent = {
       {
         year: "2020",
         photo: {
-          src: "/images/novios2020.jpeg",
+          src: "/images/pau-4.jpeg",
           alt: "Nosotros en 2020",
         },
         caption: "Sobrevivimos juntos",
@@ -215,7 +215,7 @@ export const bookContent = {
       {
         year: "2023",
         photo: {
-          src: "/images/novios2023-1.jpeg",
+          src: "/images/pau-5.jpeg",
           alt: "Nosotros en 2023",
         },
         caption: "Cada vez más nosotros",
@@ -223,7 +223,7 @@ export const bookContent = {
       {
         year: "2026",
         photo: {
-          src: "/images/novios2026.jpeg",
+          src: "/images/pau-6.jpeg",
           alt: "Nosotros hoy, 2026",
         },
         caption: "Hoy",
@@ -247,17 +247,17 @@ export const bookContent = {
     ],
   } satisfies ChangesPageContent,
 
-  recentCarousel: {
+  recentPhotos: {
     type: "carousel",
     title: "Hoy",
     photos: [
       {
-        src: "/images/novios2023-2.jpeg",
-        alt: "Foto reciente, 2023",
+        src: "/images/pau-5.jpeg",
+        alt: "Foto reciente",
       },
       {
-        src: "/images/novios2026.jpeg",
-        alt: "Foto reciente, 2026",
+        src: "/images/pau-6.jpeg",
+        alt: "Foto de hoy",
       },
     ],
     style: "polaroid",
