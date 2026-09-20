@@ -26,22 +26,28 @@ function MomentIllustration() {
       <path
         d="M140 88 C140 88 132 80 126 84 C120 88 122 96 140 110 C158 96 160 88 154 84 C148 80 140 88 140 88 Z"
         fill="#FF69B4"
+        cx = "140"
+        cy = "88"
         opacity="0.85"
       />
       <path
         d="M118 58 C118 58 113 54 110 56 C107 58 108 63 118 70 C128 63 129 58 126 56 C123 54 118 58 118 58 Z"
         fill="#FFB6C1"
+        cx = "118"
+        cy = "58"
         opacity="0.7"
       />
       <path
         d="M168 52 C168 52 163 48 160 50 C157 52 158 57 168 64 C178 57 179 52 176 50 C173 48 168 52 168 52 Z"
         fill="#ADD8E6"
+        cx = "168"
+        cy = "52"
         opacity="0.8"
       />
 
       {/* Small sparkles */}
-      <circle cx="70" cy="50" r="2.5" fill="#FF69B4" opacity="0.5" />
-      <circle cx="210" cy="48" r="2.5" fill="#87CEEB" opacity="0.55" />
+      <circle cx="20" cy="50" r="2.5" fill="#FF69B4" opacity="0.5" />
+      <circle cx="210" cy="8" r="2.5" fill="#87CEEB" opacity="0.55" />
       <circle cx="140" cy="40" r="2" fill="#FFB6C1" opacity="0.6" />
     </svg>
   );

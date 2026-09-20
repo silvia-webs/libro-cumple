@@ -199,7 +199,7 @@ export const bookContent = {
       {
         year: "2018",
         photo: {
-          src: "/images/pau-3.jpeg",
+          src: "/images/novios2018.jpeg",
           alt: "Nosotros en 2018",
         },
         caption: "Nuestro primer año",
@@ -207,7 +207,7 @@ export const bookContent = {
       {
         year: "2020",
         photo: {
-          src: "/images/pau-4.jpeg",
+          src: "/images/novios2020.jpeg",
           alt: "Nosotros en 2020",
         },
         caption: "Sobrevivimos juntos",
@@ -215,7 +215,7 @@ export const bookContent = {
       {
         year: "2023",
         photo: {
-          src: "/images/pau-5.jpeg",
+          src: "/images/novios2023-1.jpeg",
           alt: "Nosotros en 2023",
         },
         caption: "Cada vez más nosotros",
@@ -223,7 +223,7 @@ export const bookContent = {
       {
         year: "2026",
         photo: {
-          src: "/images/pau-6.jpeg",
+          src: "/images/novios2026.jpeg",
           alt: "Nosotros hoy, 2026",
         },
         caption: "Hoy",
@@ -256,7 +256,7 @@ export const bookContent = {
         alt: "Foto reciente",
       },
       {
-        src: "/images/pau-6.jpeg",
+        src: "/images/novios2026.jpeg",
         alt: "Foto de hoy",
       },
     ],

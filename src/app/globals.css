@@ -30,10 +30,15 @@ body {
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 12px 40px rgb(0 0 0 / 0.12);
+  touch-action: manipulation;
 }
 
 .book-shell .stf__wrapper.--portrait {
-  /* Keep portrait wrapper from collapsing with padding-bottom hack */
   height: 100% !important;
   padding-bottom: 0 !important;
+}
+
+.book-viewport .book-nav-btn {
+  z-index: 30;
+  pointer-events: auto;
 }

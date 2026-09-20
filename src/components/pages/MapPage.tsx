@@ -1,21 +1,13 @@
+import Image from "next/image";
 import { forwardRef } from "react";
 import { bookContent } from "@/data/bookContent";
 
 /** Approx. coords for Universidad El Bosque, Bogotá */
 const MAP_LAT = 4.710989;
 const MAP_LNG = -74.032222;
-const MAP_DELTA = 0.012;
 
 const MapPage = forwardRef<HTMLDivElement>(function MapPage(_, ref) {
-  const { title, placeLabel, query } = bookContent.map;
-  const bbox = [
-    MAP_LNG - MAP_DELTA,
-    MAP_LAT - MAP_DELTA,
-    MAP_LNG + MAP_DELTA,
-    MAP_LAT + MAP_DELTA,
-  ].join("%2C");
-
-  const embedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${MAP_LAT}%2C${MAP_LNG}`;
+  const { title, placeLabel } = bookContent.map;
   const mapsLink = `https://www.openstreetmap.org/?mlat=${MAP_LAT}&mlon=${MAP_LNG}#map=16/${MAP_LAT}/${MAP_LNG}`;
 
   return (
@@ -30,22 +22,26 @@ const MapPage = forwardRef<HTMLDivElement>(function MapPage(_, ref) {
           </h2>
         </header>
 
-        <div className="relative min-h-0 flex-1 overflow-hidden rounded-2xl shadow-lg ring-1 ring-rosa-medio/15">
-          <iframe
-            title={`Mapa de ${query}`}
-            src={embedSrc}
-            className="absolute inset-0 h-full w-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+        <a
+          href={mapsLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir mapa de ${placeLabel}`}
+          className="relative min-h-0 flex-1 overflow-hidden rounded-2xl shadow-lg ring-1 ring-rosa-medio/15"
+        >
+          <Image
+            src="/images/map-el-bosque.png"
+            alt={`Mapa de ${placeLabel}`}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 480px"
+            priority={false}
           />
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-[120%]"
+            className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-black/5"
             aria-hidden
-          >
-            <span className="block h-4 w-4 rounded-full bg-red-500 shadow-md ring-2 ring-blanco" />
-            <span className="mx-auto mt-[-2px] block h-3 w-0.5 bg-red-500" />
-          </div>
-        </div>
+          />
+        </a>
 
         <p className="mt-4 shrink-0 text-center font-sans text-base text-foreground/80 sm:text-lg">
           <a
