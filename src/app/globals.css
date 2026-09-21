@@ -42,3 +42,34 @@ body {
   z-index: 30;
   pointer-events: auto;
 }
+
+.heartbeat {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heartbeat 1.35s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.12);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.18);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heartbeat {
+    animation: none;
+  }
+}

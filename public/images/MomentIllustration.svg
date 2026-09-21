@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="none">
+  <style>
+    .heartbeat {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: heartbeat 1.35s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      14% {
+        transform: scale(1.12);
+      }
+      28% {
+        transform: scale(1);
+      }
+      42% {
+        transform: scale(1.18);
+      }
+      70% {
+        transform: scale(1);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .heartbeat {
+        animation: none;
+      }
+    }
+  </style>
+
+  <path
+    class="heartbeat"
+    d="M140 176 C118 146 55 124 52 80 A52 56 0 0 1 140 34 A52 56 0 0 1 228 80 C224 124 162 146 140 176 Z"
+    fill="#ff0000"
+    opacity="0.2"
+  />
+
+  <ellipse cx="140" cy="175" rx="90" ry="12" fill="#ADD8E6" opacity="0.35" />
+
+  <g fill="#FF69B4" opacity="0.55">
+    <circle cx="100" cy="72" r="18" />
+    <path d="M78 148 C78 112 90 98 100 98 C110 98 122 112 122 148 Z" />
+  </g>
+  <g fill="#87CEEB" opacity="0.65">
+    <circle cx="180" cy="70" r="18" />
+    <path d="M158 148 C158 110 170 96 180 96 C190 96 202 110 202 148 Z" />
+  </g>
+
+  <path
+    d="M140 88 C140 88 132 80 126 84 C120 88 122 96 140 110 C158 96 160 88 154 84 C148 80 140 88 140 88 Z"
+    fill="#FF69B4"
+    opacity="0.85"
+  />
+</svg>
