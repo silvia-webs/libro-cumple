@@ -23,6 +23,7 @@ const MapPage = forwardRef<HTMLDivElement>(function MapPage(_, ref) {
         </header>
 
         <a
+          data-no-flip
           href={mapsLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -30,11 +31,10 @@ const MapPage = forwardRef<HTMLDivElement>(function MapPage(_, ref) {
           className="relative min-h-0 flex-1 overflow-hidden rounded-2xl shadow-lg ring-1 ring-rosa-medio/15"
         >
           <Image
-            src="/images/map-el-bosque.png"
+            src="/images/el-bosque-uni.png"
             alt={`Mapa de ${placeLabel}`}
             fill
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 480px"
+            className="object-center"
             priority={false}
           />
           <div
@@ -45,6 +45,7 @@ const MapPage = forwardRef<HTMLDivElement>(function MapPage(_, ref) {
 
         <p className="mt-4 shrink-0 text-center font-sans text-base text-foreground/80 sm:text-lg">
           <a
+            data-no-flip
             href={mapsLink}
             target="_blank"
             rel="noopener noreferrer"

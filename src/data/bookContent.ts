@@ -180,7 +180,7 @@ export const bookContent = {
     title: "Cómo nos conocimos",
     body: "Nos conocimos en la universidad, entre clases y pasillos. No recuerdo el momento exacto, pero sí recuerdo que desde entonces algo cambió. Poco a poco te fuiste volviendo mi persona favorita.",
     photo: {
-      src: "/images/pau-3.jpeg",
+      src: "/images/novios2016.jpeg",
       alt: "Recuerdo de cuando nos conocimos",
     },
   } satisfies StoryPageContent,
@@ -196,6 +196,30 @@ export const bookContent = {
     type: "timeline",
     title: "Nuestra historia en imágenes",
     items: [
+      {
+        year: "2016",
+        photo: {
+          src: "/images/novios2016.jpeg",
+          alt: "Nosotros en 2016",
+        },
+        caption: "Antes de ser novios",
+      },
+      {
+        year: "2017",
+        photo: {
+          src: "/images/novios2017.jpeg",
+          alt: "Nosotros en 2017",
+        },
+        caption: "El año en que todo cambió",
+      },
+      {
+        year: "2017",
+        photo: {
+          src: "/images/novios2017-2.jpeg",
+          alt: "Otro recuerdo de 2017",
+        },
+        caption: "Juntos desde entonces",
+      },
       {
         year: "2018",
         photo: {
@@ -213,12 +237,28 @@ export const bookContent = {
         caption: "Sobrevivimos juntos",
       },
       {
+        year: "2021",
+        photo: {
+          src: "/images/novios2021.jpeg",
+          alt: "Nosotros en 2021",
+        },
+        caption: "Un año más contigo",
+      },
+      {
         year: "2023",
         photo: {
           src: "/images/novios2023-1.jpeg",
           alt: "Nosotros en 2023",
         },
         caption: "Cada vez más nosotros",
+      },
+      {
+        year: "2023",
+        photo: {
+          src: "/images/novios2023-2.jpeg",
+          alt: "Otro recuerdo de 2023",
+        },
+        caption: "Seguimos eligiéndonos",
       },
       {
         year: "2026",
@@ -233,16 +273,16 @@ export const bookContent = {
 
   changes: {
     type: "changes",
-    title: "9 años, 9 cambios",
+    title: "9 años, resumidos en",
     items: [
-      { icon: "🏠", text: "3 casas" },
-      { icon: "🎓", text: "2 títulos" },
-      { icon: "🐾", text: "1 mascota" },
-      { icon: "✈️", text: "2 viajes" },
-      { icon: "🚗", text: "1 coche" },
-      { icon: "💼", text: "3 trabajos" },
+      { icon: "🎓", text: "2 carreras" },
+      { icon: "🏠", text: "1 hogar" },
+      { icon: "✈️", text: "Muchos viajes" },
+      { icon: "🏨", text: "Hoteles de lujo" },
+      { icon: "✨", text: "Experiencias inolvidables" },
       { icon: "🎂", text: "9 cumpleaños juntos" },
-      { icon: "📸", text: "Miles de fotos" },
+      { icon: "📸", text: "Miles de recuerdos" },
+      { icon: "🤣", text: "Anecdotas infinitas" },
       { icon: "❤️", text: "1 amor eterno" },
     ],
   } satisfies ChangesPageContent,
@@ -251,10 +291,6 @@ export const bookContent = {
     type: "carousel",
     title: "Hoy",
     photos: [
-      {
-        src: "/images/pau-5.jpeg",
-        alt: "Foto reciente",
-      },
       {
         src: "/images/novios2026.jpeg",
         alt: "Foto de hoy",

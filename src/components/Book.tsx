@@ -189,6 +189,30 @@ export default function Book() {
     flipApiRef.current?.flipNext("bottom");
   }, []);
 
+  // Block pageflip from eating gestures inside interactive regions.
+  useEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+
+    const blockIfNoFlip = (event: Event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest("[data-no-flip]")) {
+        event.stopPropagation();
+      }
+    };
+
+    root.addEventListener("pointerdown", blockIfNoFlip, true);
+    root.addEventListener("touchstart", blockIfNoFlip, true);
+    root.addEventListener("mousedown", blockIfNoFlip, true);
+
+    return () => {
+      root.removeEventListener("pointerdown", blockIfNoFlip, true);
+      root.removeEventListener("touchstart", blockIfNoFlip, true);
+      root.removeEventListener("mousedown", blockIfNoFlip, true);
+    };
+  }, [ref]);
+
   return (
     <div ref={ref} className="book-viewport relative h-full w-full">
       {!size ? (
@@ -217,7 +241,7 @@ export default function Book() {
             mobileScrollSupport
             useMouseEvents
             clickEventForward
-            disableFlipByClick={false}
+            disableFlipByClick
             renderOnlyPageLengthChange
             onInit={handleInit}
             onFlip={handleFlip}

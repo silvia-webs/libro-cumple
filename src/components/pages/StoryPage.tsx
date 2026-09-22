@@ -18,7 +18,7 @@ const StoryPage = forwardRef<HTMLDivElement>(function StoryPage(_, ref) {
         </header>
 
         <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6">
-          <figure className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full shadow-lg ring-4 ring-blanco sm:h-44 sm:w-44">
+          <figure className="relative h-80 w-60 shrink-0 overflow-hidden rounded-3xl shadow-lg ring-4 ring-blanco sm:h-44 sm:w-44">
             <Image
               src={photo.src}
               alt={photo.alt}

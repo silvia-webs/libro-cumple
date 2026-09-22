@@ -16,7 +16,9 @@ const AudioPage = forwardRef<HTMLDivElement>(function AudioPage(_, ref) {
       />
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 px-8 text-center">
-        <PlayButton src={audioSrc} label={playLabel} />
+        <div data-no-flip>
+          <PlayButton src={audioSrc} label={playLabel} />
+        </div>
 
         <div className="flex flex-col gap-2">
           <p className="font-display text-3xl text-rosa-medio sm:text-4xl">

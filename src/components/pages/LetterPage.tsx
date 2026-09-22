@@ -32,7 +32,7 @@ const LetterPage = forwardRef<HTMLDivElement>(function LetterPage(_, ref) {
           />
         </header>
 
-        <div className="flex min-h-0 flex-1 flex-col justify-between gap-8">
+        <div className="flex min-h-0 flex-1 flex-col gap-8">
           <p className="font-sans text-[1.05rem] leading-[1.75] text-foreground/85 sm:text-lg sm:leading-relaxed">
             {body}
           </p>

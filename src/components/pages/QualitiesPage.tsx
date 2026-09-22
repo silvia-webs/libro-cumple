@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-// import HeartConfetti from "@/components/ui/HeartConfetti";
+import HeartConfetti from "@/components/ui/HeartConfetti";
 import { bookContent } from "@/data/bookContent";
 
 const QualitiesPage = forwardRef<HTMLDivElement>(function QualitiesPage(
@@ -18,8 +18,8 @@ const QualitiesPage = forwardRef<HTMLDivElement>(function QualitiesPage(
           <h2 className="font-display text-4xl text-rosa-medio sm:text-5xl">
             {title}
           </h2>
-          <div className="mt-3">
-            {/* <HeartConfetti label={buttonLabel} /> */}
+          <div data-no-flip className="mt-3">
+            <HeartConfetti label={buttonLabel} />
           </div>
         </header>
 
