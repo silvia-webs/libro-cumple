@@ -104,9 +104,14 @@ export type FuturePageContent = {
   text: string;
 };
 
+export type GiftWrapContent = {
+  title: string;
+  hint: string;
+};
+
 export type AudioPageContent = {
   type: "audio";
-  playLabel: string;
+  title: string;
   message: string;
   credits: string;
   audioSrc: string;
@@ -342,12 +347,18 @@ export const bookContent = {
     text: "Contigo, siempre",
   } satisfies FuturePageContent,
 
+  gift: {
+    title: "Es un regalo",
+    hint: "Toca para abrir este lindo regalo para la más linda cumpleañera",
+  } satisfies GiftWrapContent,
+
   audio: {
     type: "audio",
-    playLabel: "Escucha mi voz",
-    message: "Feliz cumpleaños, mi amor. Te amo.",
+    title: "Para tu amor",
+    message:
+      "Juanes escribió esta canción pensando en un amor. Yo se la dedico al mío.\n\nQue suene de fondo mientras hojeas este libro: es mi forma de estar cerquita, de abrazarte con una melodía cuando no puedo hacerlo con los brazos.\n\nEstos 9 años, tus 29 y todos los que vienen… esta canción es para tu amor. Para ti.",
     credits: `Hecho con amor por ${bookMeta.hisNickName}`,
-    audioSrc: "/audio/mensaje.mp3",
+    audioSrc: "/audio/cancion.mpeg",
   } satisfies AudioPageContent,
 } as const;
 

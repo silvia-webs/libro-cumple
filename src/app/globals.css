@@ -68,8 +68,89 @@ body {
   }
 }
 
+.gift-wrap {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.gift-wrap__paper {
+  position: absolute;
+  top: 0;
+  width: 52%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, rgb(255 255 255 / 0.22), transparent 36%),
+    linear-gradient(160deg, #ff8ac4, #ff69b4 55%, #87ceeb);
+  transition: transform 0.85s ease-in;
+}
+
+.gift-wrap__paper--left {
+  left: 0;
+  transform-origin: left center;
+}
+
+.gift-wrap__paper--right {
+  right: 0;
+  transform-origin: right center;
+}
+
+.gift-wrap__ribbon--v,
+.gift-wrap__ribbon--h {
+  position: absolute;
+  background: #87ceeb;
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 0.25);
+  transition: opacity 0.45s ease;
+}
+
+.gift-wrap__ribbon--v {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 22px;
+  transform: translateX(-50%);
+}
+
+.gift-wrap__ribbon--h {
+  top: 46%;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  transform: translateY(-50%);
+}
+
+.gift-wrap--opening .gift-wrap__paper--left {
+  transform: translateX(-104%);
+}
+
+.gift-wrap--opening .gift-wrap__paper--right {
+  transform: translateX(104%);
+}
+
+.gift-wrap--opening .gift-wrap__ribbon--v,
+.gift-wrap--opening .gift-wrap__ribbon--h,
+.gift-wrap--opening .gift-wrap__box,
+.gift-wrap--opening .gift-wrap__copy {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gift-wrap--opening .gift-wrap__box {
+  transform: scale(1.08);
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .heartbeat {
     animation: none;
+  }
+
+  .gift-wrap__paper,
+  .gift-wrap__ribbon--v,
+  .gift-wrap__ribbon--h,
+  .gift-wrap--opening .gift-wrap__box {
+    transition: none;
   }
 }
