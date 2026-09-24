@@ -4,6 +4,13 @@ export type PhotoRef = {
   caption?: string;
 };
 
+export type MediaItem = {
+  id: string;
+  kind: "photo" | "video";
+  src: string;
+  alt: string;
+};
+
 export type BookMeta = {
   herNickName: string;
   hisNickName: string;
@@ -91,6 +98,12 @@ export type ChangesPageContent = {
   items: ChangeItem[];
 };
 
+export type RecentPhotosPageContent = {
+  type: "recentPhotos";
+  title: string;
+  items: MediaItem[];
+};
+
 export type QualitiesPageContent = {
   type: "qualities";
   title: string;
@@ -127,6 +140,7 @@ export type BookPageContent =
   | MapPageContent
   | TimelinePageContent
   | ChangesPageContent
+  | RecentPhotosPageContent
   | QualitiesPageContent
   | FuturePageContent
   | AudioPageContent;
@@ -293,16 +307,53 @@ export const bookContent = {
   } satisfies ChangesPageContent,
 
   recentPhotos: {
-    type: "carousel",
+    type: "recentPhotos",
     title: "Hoy",
-    photos: [
+    items: [
       {
-        src: "/images/novios2026.jpeg",
-        alt: "Foto de hoy",
+        id: "2026-3",
+        kind: "photo",
+        src: "/images/2026-3.jpeg",
+        alt: "Nosotros en 2026",
+      },
+      {
+        id: "2026-video-1",
+        kind: "video",
+        src: "/images/2026-video-1.mp4",
+        alt: "Un momento de hoy",
+      },
+      {
+        id: "2026-1",
+        kind: "photo",
+        src: "/images/2026-1.jpeg",
+        alt: "Caminata en Monserrate",
+      },
+      {
+        id: "2026-5",
+        kind: "photo",
+        src: "/images/2026-5.jpeg",
+        alt: "Un recuerdo de este año",
+      },
+      {
+        id: "2026-video-2",
+        kind: "video",
+        src: "/images/2026-video-2.mp4",
+        alt: "Otro momento de hoy",
+      },
+      {
+        id: "2026-2",
+        kind: "photo",
+        src: "/images/2026-2.jpeg",
+        alt: "Juntos en 2026",
+      },
+      {
+        id: "2026-4",
+        kind: "photo",
+        src: "/images/2026-4.jpeg",
+        alt: "Hoy, juntos",
       },
     ],
-    style: "polaroid",
-  } satisfies CarouselPageContent,
+  } satisfies RecentPhotosPageContent,
 
   qualities: {
     type: "qualities",
