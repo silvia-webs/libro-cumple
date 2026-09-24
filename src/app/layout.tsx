@@ -17,6 +17,11 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Feliz 29",
   description: "Un libro digital de cumpleaños — 9 años juntos, infinito por delante",
+  icons: {
+    icon: [{ url: "/images/MomentIllustration.svg", type: "image/svg+xml" }],
+    shortcut: "/images/MomentIllustration.svg",
+    apple: "/images/MomentIllustration.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

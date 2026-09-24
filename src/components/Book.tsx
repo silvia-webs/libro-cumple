@@ -14,13 +14,11 @@ import AudioPage from "@/components/pages/AudioPage";
 import ChangesPage from "@/components/pages/ChangesPage";
 import CoverPage from "@/components/pages/CoverPage";
 import EarlyPhotosPage from "@/components/pages/EarlyPhotosPage";
-import FuturePage from "@/components/pages/FuturePage";
 import IllustrationPage from "@/components/pages/IllustrationPage";
 import LetterPage from "@/components/pages/LetterPage";
 import MapPage from "@/components/pages/MapPage";
 import QualitiesPage from "@/components/pages/QualitiesPage";
 import RecentPhotosPage from "@/components/pages/RecentPhotosPage";
-import StoryPage from "@/components/pages/StoryPage";
 import TimelinePage from "@/components/pages/TimelinePage";
 
 const PAGE_COUNT = 12;
@@ -31,14 +29,12 @@ const BOOK_PAGES = [
   <LetterPage key="p2" />,
   <EarlyPhotosPage key="p3" />,
   <IllustrationPage key="p4" />,
-  <StoryPage key="p5" />,
-  <MapPage key="p6" />,
-  <TimelinePage key="p7" />,
-  <ChangesPage key="p8" />,
-  <RecentPhotosPage key="p9" />,
-  <QualitiesPage key="p10" />,
-  <FuturePage key="p11" />,
-  <AudioPage key="p12" />,
+  <MapPage key="p5" />,
+  <TimelinePage key="p6" />,
+  <ChangesPage key="p7" />,
+  <RecentPhotosPage key="p8" />,
+  <QualitiesPage key="p9" />,
+  <AudioPage key="p10" />,
 ];
 
 const HTMLFlipBook = dynamic(() => import("react-pageflip-enhanced"), {

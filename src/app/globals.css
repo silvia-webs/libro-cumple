@@ -45,7 +45,6 @@ body {
 
 .heartbeat {
   transform-box: fill-box;
-  transform-origin: center;
   animation: heartbeat 1.35s ease-in-out infinite;
 }
 

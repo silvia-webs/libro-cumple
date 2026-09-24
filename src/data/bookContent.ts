@@ -72,13 +72,6 @@ export type IllustrationPageContent = {
   subtitle: string;
 };
 
-export type StoryPageContent = {
-  type: "story";
-  title: string;
-  body: string;
-  photo: PhotoRef;
-};
-
 export type MapPageContent = {
   type: "map";
   title: string;
@@ -107,6 +100,7 @@ export type RecentPhotosPageContent = {
 export type QualitiesPageContent = {
   type: "qualities";
   title: string;
+  subtitle: string;
   buttonLabel: string;
   qualities: Quality[];
 };
@@ -136,7 +130,6 @@ export type BookPageContent =
   | CarouselPageContent
   | EarlyPhotosPageContent
   | IllustrationPageContent
-  | StoryPageContent
   | MapPageContent
   | TimelinePageContent
   | ChangesPageContent
@@ -193,16 +186,6 @@ export const bookContent = {
     dateLine: "28 de noviembre de 2017 — Universidad El Bosque, Bogotá",
     subtitle: "Ella tenía 20 años, yo la miraba y no lo sabía todavía.",
   } satisfies IllustrationPageContent,
-
-  story: {
-    type: "story",
-    title: "Cómo nos conocimos",
-    body: "Nos conocimos en la universidad, entre clases y pasillos. No recuerdo el momento exacto, pero sí recuerdo que desde entonces algo cambió. Poco a poco te fuiste volviendo mi persona favorita.",
-    photo: {
-      src: "/images/novios2016.jpeg",
-      alt: "Recuerdo de cuando nos conocimos",
-    },
-  } satisfies StoryPageContent,
 
   map: {
     type: "map",
@@ -357,8 +340,9 @@ export const bookContent = {
 
   qualities: {
     type: "qualities",
-    title: "29 razones",
-    buttonLabel: "¡Mira por qué te amo!",
+    title: "29 cualidades",
+    subtitle: "Que me encantan de ti",
+    buttonLabel: "¡Eres increíble!",
     qualities: [
       { id: 1, label: "Amorosa 💙" },
       { id: 2, label: "Tierna 🥰" },
@@ -392,12 +376,6 @@ export const bookContent = {
     ],
   } satisfies QualitiesPageContent,
 
-  future: {
-    type: "future",
-    title: "Próximos 29 años...",
-    text: "Contigo, siempre",
-  } satisfies FuturePageContent,
-
   gift: {
     title: "Es un regalo",
     hint: "Toca para abrir este lindo regalo para la más linda cumpleañera",
@@ -408,7 +386,7 @@ export const bookContent = {
     title: "Para tu amor",
     message:
       "Juanes escribió esta canción pensando en un amor. Yo se la dedico al mío.\n\nQue suene de fondo mientras hojeas este libro: es mi forma de estar cerquita, de abrazarte con una melodía cuando no puedo hacerlo con los brazos.\n\nEstos 9 años, tus 29 y todos los que vienen… esta canción es para tu amor. Para ti.",
-    credits: `Hecho con amor por ${bookMeta.hisNickName}`,
+    credits: `Hecho con amor para Pau💙🥰`,
     audioSrc: "/audio/cancion.mpeg",
   } satisfies AudioPageContent,
 } as const;

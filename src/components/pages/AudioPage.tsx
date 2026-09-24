@@ -13,6 +13,7 @@ function MicAndHearts() {
         d="M38 58 C38 48 48 42 56 48 C60 51 62 54 64 58 C66 54 68 51 72 48 C80 42 90 48 90 58 C90 72 64 90 64 90 C64 90 38 72 38 58 Z"
         fill="#FF69B4"
         opacity="0.9"
+        transform="translate(-22 -20)"
       />
       <path
         className="heartbeat"
@@ -28,7 +29,15 @@ function MicAndHearts() {
       />
 
       <rect x="76" y="42" width="28" height="40" rx="14" fill="#FF69B4" />
-      <rect x="82" y="48" width="16" height="28" rx="8" fill="#FFFFFF" opacity="0.35" />
+      <rect
+        x="82"
+        y="48"
+        width="16"
+        height="28"
+        rx="8"
+        fill="#FFFFFF"
+        opacity="0.35"
+      />
       <path
         d="M70 80 C70 96 86 108 90 108 C94 108 110 96 110 80"
         fill="none"
